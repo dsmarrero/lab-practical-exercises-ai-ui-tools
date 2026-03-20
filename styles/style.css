@@ -1,0 +1,244 @@
+/* Spotify Clone - Refactored Styles */
+
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+  --color-text: #1A1A1A;
+  --color-primary: #00B172;
+  --color-white: #FFF;
+  --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* ------------------- */
+/* Reset & Globals     */
+/* ------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1.125rem; /* 18px */
+  background-color: var(--color-white);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 { font-size: 5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; color: var(--color-primary); }
+h4 { font-size: 1.5rem; }
+
+p {
+  max-width: 65ch; /* Improves readability */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------------- */
+/* Navigation          */
+/* ------------------- */
+.navbar {
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+/* ------------------- */
+/* Main Content        */
+/* ------------------- */
+main {
+  padding-top: 72px; /* Offset for fixed navbar */
+}
+
+.hero {
+  color: var(--color-white);
+  background-image: url('../images/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* ------------------- */
+/* Features Section    */
+/* ------------------- */
+.features {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 1rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, basis */
+}
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ------------------- */
+/* Showcase Section    */
+/* ------------------- */
+.showcase {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/spotify-icon-white.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.showcase-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-text {
+  flex: 1 1 500px;
+}
+
+.showcase-text h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.showcase-item {
+  margin-bottom: 2rem;
+}
+
+.showcase-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.showcase-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ------------------- */
+/* Dividers            */
+/* ------------------- */
+.divider-green {
+  border: none;
+  border-top: 5px solid var(--color-primary);
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 2rem;
+}
+
+.divider-white {
+  border: none;
+  border-top: 5px solid var(--color-white);
+  width: 100%;
+  max-width: 200px;
+  margin: 0 0 2rem;
+}
